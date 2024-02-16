@@ -23,10 +23,22 @@ var pet = {
     }
 }
 
+
+
 let dog = Object.create(pet);
 
-dog.setName(() => {
-    console.log(`The pet's name is now set to: ${dog.name}`);
-})
+let cat = Object.create(pet);
 
+cat.meow = function() {
+
+    console.log('Meow');
+}
+
+dog.trimNails();
+
+cat.setName();
+
+console.log(dog);
+
+cat.meow();
 
